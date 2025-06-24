@@ -1,7 +1,14 @@
 package AK_01_Array;
 import java.util.Scanner;
 
-public class AK_06_Array {
+public class AK_01_Array {
+    public static int arrSum(int[] arr) {
+        int sum = 0;
+        for(int i : arr) {
+            sum += i;
+        }
+        return sum;
+    }
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter the size of array: ");
@@ -14,10 +21,7 @@ public class AK_06_Array {
             arr[i] = sc.nextInt();
         }
 
-        int sum = 0;
-        for(int i : arr) {
-            sum += i;
-        }
-        System.out.println(sum);
+
+        System.out.println(arrSum(arr));
     }
 }
